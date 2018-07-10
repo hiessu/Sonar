@@ -21,14 +21,15 @@ Pod::Spec.new do |spec|
     ss.dependency 'CocoaAsyncSocket', '~> 7.6'
     ss.dependency 'PeerTalk', '~>0.0.2'
     ss.dependency 'OpenSSL-Static', '1.0.2.c1'
-    ss.source_files = 'iOS/FBDefines/*.{h,cpp,m,mm}', 'iOS/SonarKit/**/*.{h,cpp,m,mm}', 'iOS/SonarKit/FBCxxUtils/*.{h, mm}'
+    ss.source_files = 'iOS/SonarKit/FBDefines/*.{h,cpp,m,mm}', 'iOS/SonarKit/**/*.{h,cpp,m,mm}', 'iOS/SonarKit/FBCxxUtils/*.{h, mm}'
     ss.public_header_files = 'iOS/SonarKit/CppBridge/*.{h}',
                                'iOS/SonarKit/SonarClient.h',
                                'iOS/SonarKit/SonarDeviceData.h',
                                'iOS/SonarKit/SonarPlugin.h',
                                'iOS/SonarKit/SonarResponder.h',
                                'iOS/SonarKit/SonarConnection.h',
-                               'iOS/SonarKit/SKMacros.h'
+                               'iOS/SonarKit/SKMacros.h',
+                               'iOS/SonarKit/FBDefines/FBMacros.h'
 
     ss.compiler_flags = '-DFB_SONARKIT_ENABLED=1 -DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_HAVE_LIBGFLAGS=0 -DFOLLY_HAVE_LIBJEMALLOC=0 -DFOLLY_HAVE_PREADV=0 -DFOLLY_HAVE_PWRITEV=0 -DFOLLY_HAVE_TFO=0 -DFOLLY_USE_SYMBOLIZER=0'
     ss.pod_target_xcconfig = { "USE_HEADERMAP" => "NO",
