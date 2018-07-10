@@ -41,6 +41,7 @@ Pod::Spec.new do |spec|
     ss.dependency             'Yoga', yoga_version
     ss.dependency             'YogaKit', yogakit_version
     ss.compiler_flags       = folly_compiler_flags
+    ss.header_mappings_dir  = 'iOS/Plugins/SonarKitLayoutPlugin'
     ss.public_header_files = 'iOS/Plugins/SonarKitLayoutPlugin/SonarKitLayoutPlugin/SonarKitLayoutPlugin.h',
                               'iOS/Plugins/SonarKitLayoutPlugin/SonarKitLayoutPlugin/SKTouch.h',
                               'iOS/Plugins/SonarKitLayoutPlugin/SonarKitLayoutPlugin/SKDescriptorMapper.h',
@@ -63,6 +64,7 @@ Pod::Spec.new do |spec|
     ss.dependency             'ComponentKit'
     ss.dependency             'SonarKit/SonarKitLayoutPlugin'
     ss.compiler_flags       = folly_compiler_flags
+    ss.header_mappings_dir  = 'iOS/Plugins/SonarKitLayoutPlugin'
     ss.public_header_files = 'iOS/Plugins/SonarKitLayoutPlugin/SonarKitLayoutComponentKitSupport/SonarKitLayoutComponentKitSupport.h',
                              'iOS/Plugins/SonarKitLayoutPlugin/SonarKitLayoutComponentKitSupport/SKComponentLayoutWrapper.h'
 
@@ -74,6 +76,7 @@ Pod::Spec.new do |spec|
   spec.subspec "SonarKitNetworkPlugin" do |ss|
     ss.dependency             'SonarKit/Core'
     ss.compiler_flags       = folly_compiler_flags
+    ss.header_mappings_dir  = 'iOS/Plugins/SonarKitNetworkPlugin'
     ss.public_header_files = 'iOS/Plugins/SonarKitNetworkPlugin/SonarKitNetworkPlugin/SonarKitNetworkPlugin.h',
                              'iOS/Plugins/SonarKitNetworkPlugin/SonarKitNetworkPlugin/SKBufferingPlugin.h',
                              'iOS/Plugins/SonarKitNetworkPlugin/SonarKitNetworkPlugin/SKDispatchQueue.h',
@@ -87,6 +90,7 @@ Pod::Spec.new do |spec|
     ss.dependency             'SonarKit/Core'
     ss.dependency  'SonarKit/SonarKitNetworkPlugin'
     ss.compiler_flags       = folly_compiler_flags
+    ss.header_mappings_dir = 'iOS/Plugins/SonarKitNetworkPlugin'
     ss.public_header_files = 'iOS/Plugins/SonarKitNetworkPlugin/SKIOSNetworkPlugin/SKIOSNetworkAdapter.h'
     ss.source_files         = "iOS/Plugins/SonarKitNetworkPlugin/SKIOSNetworkPlugin/**/*.{h,cpp,m,mm}"
     ss.pod_target_xcconfig = { "USE_HEADERMAP" => "NO",
